@@ -4,7 +4,7 @@ from app.models.sandwich import Sandwich
 
 sandwich_routes = Blueprint("sandwich_routes", __name__)
 
-@sandwich_routes.route("/sandwich")
+@sandwich_routes.route("/sandwiches")
 def sandwiches():
     sandwiches = Sandwich.all()
     return render_template("sandwiches.html", sandwiches=sandwiches)
