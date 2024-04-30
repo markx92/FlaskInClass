@@ -28,9 +28,9 @@ def create_order():
 
     form_data = dict(request.form)
     print("FORM DATA:", form_data)
-    product_id = form_data["product_id"]
-    product_name = form_data["product_name"]
-    product_price = form_data["product_price"]
+    sandwich_id = form_data["sandwich_id"]
+    sandwich_name = form_data["sandwich_name"]
+    sandwich_price = form_data["sandwich_price"]
 
     current_user = session.get("current_user")
     user_email = current_user["email"]
@@ -38,9 +38,9 @@ def create_order():
     try:
         params = {
             "user_email": user_email,
-            "product_id": int(product_id),
-            "product_name": product_name,
-            "product_price": float(product_price)
+            "sandwich_id": int(sandwich_id),
+            "sandwich_name": sandwich_name,
+            "sandwich_price": float(sandwich_price)
         }
         #order = Order(params)
         #order.save()
@@ -52,4 +52,4 @@ def create_order():
     except Exception as err:
         print(err)
         flash(f"Oops, something went wrong: {err}", "warning")
-        return redirect("/products")
+        return redirect("/sandwiches")
