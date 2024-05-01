@@ -61,4 +61,3 @@ if __name__ == "__main__":
     product = matches[0]
     print(product.name)
 
-    Product.create(params)
