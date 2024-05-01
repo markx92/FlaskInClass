@@ -4,7 +4,7 @@ from app.db import BaseModel
 
 class Order(BaseModel):
 
-    SHEET_NAME = "orders"
+    SHEET_NAME = "sandwiches"
 
     COLUMNS = ["user_email", "product_id", "product_name", "product_price"]
 

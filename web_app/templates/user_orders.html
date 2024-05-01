@@ -19,9 +19,9 @@
                     <tr>
                         <th scope="col">Order Id</th>
                         <th scope="col">User Email</th>
-                        <th scope="col">Product ID</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Product Price</th>
+                        <th scope="col">Sandwich ID</th>
+                        <th scope="col">Sandwich Name</th>
+                        <th scope="col">Sandwich Price</th>
                         <th scope="col">Timestamp</th>
                     </tr>
                 </thead>
@@ -42,7 +42,7 @@
                             {{ order.sandwich_name }}
                         </td>
                          <td>
-                            {{ order.sabndwich_price }}
+                            {{ order.sandwich_price }}
                         </td>
                         <td>
                             {{ order.created_at.strftime('%Y-%m-%d %H:%M') }} UTC
