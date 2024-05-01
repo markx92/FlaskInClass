@@ -10,7 +10,7 @@
 
     {% if orders|length == 0 %}
         <p class="lead" >Oh, you have not yet placed an order. Please visit the
-            <a href="/sandwiches">sandwiches page</a>!
+            <a href="/products">products page</a>!
         </p>
     {% else %}
         <div class="table-responsive">
@@ -19,9 +19,9 @@
                     <tr>
                         <th scope="col">Order Id</th>
                         <th scope="col">User Email</th>
-                        <th scope="col">Sandwich ID</th>
-                        <th scope="col">Sandwich Name</th>
-                        <th scope="col">Sandwich Price</th>
+                        <th scope="col">Product ID</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Price</th>
                         <th scope="col">Timestamp</th>
                     </tr>
                 </thead>
@@ -36,13 +36,13 @@
                             {{ order.user_email }}
                         </td>
                         <td>
-                            {{ order.sandwich_id }}
+                            {{ order.product_id }}
                         </td>
                         <td>
-                            {{ order.sandwich_name }}
+                            {{ order.product_name }}
                         </td>
                          <td>
-                            {{ order.sandwich_price }}
+                            {{ order.product_price }}
                         </td>
                         <td>
                             {{ order.created_at.strftime('%Y-%m-%d %H:%M') }} UTC
